@@ -1,0 +1,851 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: CGL
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL -B/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glew
+
+
+#############################################
+# Order-only phony target for glew
+
+build cmake_object_order_depends_target_glew: phony || deps/glew/CMakeFiles/glew.dir
+
+build deps/glew/CMakeFiles/glew.dir/src/glew.c.o: C_COMPILER__glew_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/src/glew.c || cmake_object_order_depends_target_glew
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = deps/glew/CMakeFiles/glew.dir/src/glew.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include
+  OBJECT_DIR = deps/glew/CMakeFiles/glew.dir
+  OBJECT_FILE_DIR = deps/glew/CMakeFiles/glew.dir/src
+  TARGET_COMPILE_PDB = deps/glew/CMakeFiles/glew.dir/glew.pdb
+  TARGET_PDB = deps/glew/libglew.pdb
+
+build deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o: C_COMPILER__glew_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/src/glewinfo.c || cmake_object_order_depends_target_glew
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include
+  OBJECT_DIR = deps/glew/CMakeFiles/glew.dir
+  OBJECT_FILE_DIR = deps/glew/CMakeFiles/glew.dir/src
+  TARGET_COMPILE_PDB = deps/glew/CMakeFiles/glew.dir/glew.pdb
+  TARGET_PDB = deps/glew/libglew.pdb
+
+build deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o: C_COMPILER__glew_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/src/visualinfo.c || cmake_object_order_depends_target_glew
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include
+  OBJECT_DIR = deps/glew/CMakeFiles/glew.dir
+  OBJECT_FILE_DIR = deps/glew/CMakeFiles/glew.dir/src
+  TARGET_COMPILE_PDB = deps/glew/CMakeFiles/glew.dir/glew.pdb
+  TARGET_PDB = deps/glew/libglew.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glew
+
+
+#############################################
+# Link the static library deps/glew/libglew.a
+
+build deps/glew/libglew.a: C_STATIC_LIBRARY_LINKER__glew_Debug deps/glew/CMakeFiles/glew.dir/src/glew.c.o deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o
+  ARCH_FLAGS = -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = deps/glew/CMakeFiles/glew.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = deps/glew/CMakeFiles/glew.dir/glew.pdb
+  TARGET_FILE = deps/glew/libglew.a
+  TARGET_PDB = deps/glew/libglew.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build deps/glew/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glew && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build deps/glew/edit_cache: phony deps/glew/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build deps/glew/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glew && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL -B/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build deps/glew/rebuild_cache: phony deps/glew/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build deps/glew/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build deps/glew/CMakeFiles/install.util: CUSTOM_COMMAND deps/glew/all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glew && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build deps/glew/install: phony deps/glew/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build deps/glew/CMakeFiles/install/local.util: CUSTOM_COMMAND deps/glew/all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glew && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build deps/glew/install/local: phony deps/glew/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build deps/glew/CMakeFiles/install/strip.util: CUSTOM_COMMAND deps/glew/all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glew && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build deps/glew/install/strip: phony deps/glew/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for uninstall
+
+build deps/glfw/uninstall: phony deps/glfw/CMakeFiles/uninstall
+
+
+#############################################
+# Utility command for edit_cache
+
+build deps/glfw/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build deps/glfw/edit_cache: phony deps/glfw/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build deps/glfw/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL -B/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build deps/glfw/rebuild_cache: phony deps/glfw/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build deps/glfw/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build deps/glfw/CMakeFiles/install.util: CUSTOM_COMMAND deps/glfw/all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build deps/glfw/install: phony deps/glfw/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build deps/glfw/CMakeFiles/install/local.util: CUSTOM_COMMAND deps/glfw/all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build deps/glfw/install/local: phony deps/glfw/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build deps/glfw/CMakeFiles/install/strip.util: CUSTOM_COMMAND deps/glfw/all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build deps/glfw/install/strip: phony deps/glfw/CMakeFiles/install/strip.util
+
+
+#############################################
+# Custom command for deps/glfw/CMakeFiles/uninstall
+
+build deps/glfw/CMakeFiles/uninstall | ${cmake_ninja_workdir}deps/glfw/CMakeFiles/uninstall: CUSTOM_COMMAND
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/cmake_uninstall.cmake
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Order-only phony target for glfw
+
+build cmake_object_order_depends_target_glfw: phony || deps/glfw/src/CMakeFiles/glfw.dir
+
+build deps/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/context.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
+  DEP_FILE = deps/glfw/src/CMakeFiles/glfw.dir/context.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics   -Wall -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src
+  OBJECT_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = deps/glfw/src/libglfw3.pdb
+
+build deps/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/init.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
+  DEP_FILE = deps/glfw/src/CMakeFiles/glfw.dir/init.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics   -Wall -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src
+  OBJECT_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = deps/glfw/src/libglfw3.pdb
+
+build deps/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/input.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
+  DEP_FILE = deps/glfw/src/CMakeFiles/glfw.dir/input.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics   -Wall -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src
+  OBJECT_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = deps/glfw/src/libglfw3.pdb
+
+build deps/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
+  DEP_FILE = deps/glfw/src/CMakeFiles/glfw.dir/monitor.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics   -Wall -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src
+  OBJECT_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = deps/glfw/src/libglfw3.pdb
+
+build deps/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/window.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
+  DEP_FILE = deps/glfw/src/CMakeFiles/glfw.dir/window.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics   -Wall -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src
+  OBJECT_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = deps/glfw/src/libglfw3.pdb
+
+build deps/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/cocoa_init.m || cmake_object_order_depends_target_glfw
+  DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
+  DEP_FILE = deps/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics   -Wall -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src
+  OBJECT_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = deps/glfw/src/libglfw3.pdb
+
+build deps/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/cocoa_monitor.m || cmake_object_order_depends_target_glfw
+  DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
+  DEP_FILE = deps/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics   -Wall -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src
+  OBJECT_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = deps/glfw/src/libglfw3.pdb
+
+build deps/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/cocoa_window.m || cmake_object_order_depends_target_glfw
+  DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
+  DEP_FILE = deps/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics   -Wall -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src
+  OBJECT_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = deps/glfw/src/libglfw3.pdb
+
+build deps/glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/iokit_joystick.m || cmake_object_order_depends_target_glfw
+  DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
+  DEP_FILE = deps/glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics   -Wall -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src
+  OBJECT_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = deps/glfw/src/libglfw3.pdb
+
+build deps/glfw/src/CMakeFiles/glfw.dir/mach_time.c.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/mach_time.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
+  DEP_FILE = deps/glfw/src/CMakeFiles/glfw.dir/mach_time.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics   -Wall -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src
+  OBJECT_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = deps/glfw/src/libglfw3.pdb
+
+build deps/glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/posix_tls.c || cmake_object_order_depends_target_glfw
+  DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
+  DEP_FILE = deps/glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics   -Wall -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src
+  OBJECT_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = deps/glfw/src/libglfw3.pdb
+
+build deps/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/nsgl_context.m || cmake_object_order_depends_target_glfw
+  DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
+  DEP_FILE = deps/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fPIC -fcolor-diagnostics   -Wall -w
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src
+  OBJECT_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  OBJECT_FILE_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = deps/glfw/src/libglfw3.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target glfw
+
+
+#############################################
+# Link the static library deps/glfw/src/libglfw3.a
+
+build deps/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug deps/glfw/src/CMakeFiles/glfw.dir/context.c.o deps/glfw/src/CMakeFiles/glfw.dir/init.c.o deps/glfw/src/CMakeFiles/glfw.dir/input.c.o deps/glfw/src/CMakeFiles/glfw.dir/monitor.c.o deps/glfw/src/CMakeFiles/glfw.dir/window.c.o deps/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o deps/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o deps/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o deps/glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.o deps/glfw/src/CMakeFiles/glfw.dir/mach_time.c.o deps/glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o deps/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o
+  ARCH_FLAGS = -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = deps/glfw/src/CMakeFiles/glfw.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_FILE = deps/glfw/src/libglfw3.a
+  TARGET_PDB = deps/glfw/src/libglfw3.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build deps/glfw/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build deps/glfw/src/edit_cache: phony deps/glfw/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build deps/glfw/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL -B/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build deps/glfw/src/rebuild_cache: phony deps/glfw/src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build deps/glfw/src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build deps/glfw/src/CMakeFiles/install.util: CUSTOM_COMMAND deps/glfw/src/all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build deps/glfw/src/install: phony deps/glfw/src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build deps/glfw/src/CMakeFiles/install/local.util: CUSTOM_COMMAND deps/glfw/src/all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build deps/glfw/src/install/local: phony deps/glfw/src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build deps/glfw/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND deps/glfw/src/all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build deps/glfw/src/install/strip: phony deps/glfw/src/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target CGL
+
+
+#############################################
+# Order-only phony target for CGL
+
+build cmake_object_order_depends_target_CGL: phony || cmake_object_order_depends_target_glew
+
+build src/CMakeFiles/CGL.dir/vector2D.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/vector2D.cpp || cmake_object_order_depends_target_CGL
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = src/CMakeFiles/CGL.dir/vector2D.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -Wno-constant-conversion
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/include -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/CGL.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_PDB = src/libCGL.pdb
+
+build src/CMakeFiles/CGL.dir/vector3D.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/vector3D.cpp || cmake_object_order_depends_target_CGL
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = src/CMakeFiles/CGL.dir/vector3D.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -Wno-constant-conversion
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/include -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/CGL.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_PDB = src/libCGL.pdb
+
+build src/CMakeFiles/CGL.dir/vector4D.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/vector4D.cpp || cmake_object_order_depends_target_CGL
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = src/CMakeFiles/CGL.dir/vector4D.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -Wno-constant-conversion
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/include -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/CGL.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_PDB = src/libCGL.pdb
+
+build src/CMakeFiles/CGL.dir/matrix3x3.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/matrix3x3.cpp || cmake_object_order_depends_target_CGL
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = src/CMakeFiles/CGL.dir/matrix3x3.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -Wno-constant-conversion
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/include -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/CGL.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_PDB = src/libCGL.pdb
+
+build src/CMakeFiles/CGL.dir/matrix4x4.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/matrix4x4.cpp || cmake_object_order_depends_target_CGL
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = src/CMakeFiles/CGL.dir/matrix4x4.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -Wno-constant-conversion
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/include -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/CGL.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_PDB = src/libCGL.pdb
+
+build src/CMakeFiles/CGL.dir/quaternion.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/quaternion.cpp || cmake_object_order_depends_target_CGL
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = src/CMakeFiles/CGL.dir/quaternion.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -Wno-constant-conversion
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/include -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/CGL.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_PDB = src/libCGL.pdb
+
+build src/CMakeFiles/CGL.dir/complex.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/complex.cpp || cmake_object_order_depends_target_CGL
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = src/CMakeFiles/CGL.dir/complex.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -Wno-constant-conversion
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/include -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/CGL.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_PDB = src/libCGL.pdb
+
+build src/CMakeFiles/CGL.dir/color.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/color.cpp || cmake_object_order_depends_target_CGL
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = src/CMakeFiles/CGL.dir/color.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -Wno-constant-conversion
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/include -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/CGL.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_PDB = src/libCGL.pdb
+
+build src/CMakeFiles/CGL.dir/osdtext.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/osdtext.cpp || cmake_object_order_depends_target_CGL
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = src/CMakeFiles/CGL.dir/osdtext.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -Wno-constant-conversion
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/include -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/CGL.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_PDB = src/libCGL.pdb
+
+build src/CMakeFiles/CGL.dir/osdfont.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/osdfont.cpp || cmake_object_order_depends_target_CGL
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = src/CMakeFiles/CGL.dir/osdfont.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -Wno-constant-conversion
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/include -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/CGL.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_PDB = src/libCGL.pdb
+
+build src/CMakeFiles/CGL.dir/viewer.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/viewer.cpp || cmake_object_order_depends_target_CGL
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = src/CMakeFiles/CGL.dir/viewer.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -Wno-constant-conversion
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/include -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/CGL.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_PDB = src/libCGL.pdb
+
+build src/CMakeFiles/CGL.dir/base64.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/base64.cpp || cmake_object_order_depends_target_CGL
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = src/CMakeFiles/CGL.dir/base64.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -Wno-constant-conversion
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/include -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/CGL.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_PDB = src/libCGL.pdb
+
+build src/CMakeFiles/CGL.dir/tinyxml2.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/tinyxml2.cpp || cmake_object_order_depends_target_CGL
+  DEFINES = -DGLEW_STATIC
+  DEP_FILE = src/CMakeFiles/CGL.dir/tinyxml2.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -Wno-constant-conversion
+  INCLUDES = -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/include -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  OBJECT_FILE_DIR = src/CMakeFiles/CGL.dir
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_PDB = src/libCGL.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target CGL
+
+
+#############################################
+# Link the static library src/libCGL.a
+
+build src/libCGL.a: CXX_STATIC_LIBRARY_LINKER__CGL_Debug src/CMakeFiles/CGL.dir/vector2D.cpp.o src/CMakeFiles/CGL.dir/vector3D.cpp.o src/CMakeFiles/CGL.dir/vector4D.cpp.o src/CMakeFiles/CGL.dir/matrix3x3.cpp.o src/CMakeFiles/CGL.dir/matrix4x4.cpp.o src/CMakeFiles/CGL.dir/quaternion.cpp.o src/CMakeFiles/CGL.dir/complex.cpp.o src/CMakeFiles/CGL.dir/color.cpp.o src/CMakeFiles/CGL.dir/osdtext.cpp.o src/CMakeFiles/CGL.dir/osdfont.cpp.o src/CMakeFiles/CGL.dir/viewer.cpp.o src/CMakeFiles/CGL.dir/base64.cpp.o src/CMakeFiles/CGL.dir/tinyxml2.cpp.o || deps/glew/libglew.a
+  ARCH_FLAGS = -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = src/CMakeFiles/CGL.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = src/CMakeFiles/CGL.dir/CGL.pdb
+  TARGET_FILE = src/libCGL.a
+  TARGET_PDB = src/libCGL.pdb
+
+
+#############################################
+# Utility command for edit_cache
+
+build src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build src/edit_cache: phony src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL -B/Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build src/rebuild_cache: phony src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build src/CMakeFiles/install.util: CUSTOM_COMMAND src/all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build src/install: phony src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build src/CMakeFiles/install/local.util: CUSTOM_COMMAND src/all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build src/install/local: phony src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build src/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/all
+  COMMAND = cd /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/src && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build src/install/strip: phony src/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Target aliases.
+
+build CGL: phony src/libCGL.a
+
+build glew: phony deps/glew/libglew.a
+
+build glfw: phony deps/glfw/src/libglfw3.a
+
+build libCGL.a: phony src/libCGL.a
+
+build libglew.a: phony deps/glew/libglew.a
+
+build libglfw3.a: phony deps/glfw/src/libglfw3.a
+
+build uninstall: phony deps/glfw/uninstall
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug
+
+build all: phony deps/glew/all deps/glfw/all src/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glew
+
+build deps/glew/all: phony deps/glew/libglew.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw
+
+build deps/glfw/all: phony deps/glfw/src/all
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/deps/glfw/src
+
+build deps/glfw/src/all: phony deps/glfw/src/libglfw3.a
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/cmake-build-debug/src
+
+build src/all: phony src/libCGL.a
+
+# =============================================================================
+# Unknown Build Time Dependencies.
+# Tell Ninja that they may appear as side effects of build rules
+# otherwise ordered by order-only dependencies.
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindFreetype.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindOpenGL.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/CMakeLists.txt /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/CMakeLists.txt /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/CMakeLists.txt /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/cmake_uninstall.cmake.in /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/CMakeLists.txt /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/glfw3.pc.in /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/glfw3Config.cmake.in /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/glfw_config.h.in /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindFreetype.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindOpenGL.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/CMakeLists.txt /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glew/CMakeLists.txt /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/CMakeLists.txt /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/cmake_uninstall.cmake.in /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/CMakeLists.txt /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/glfw3.pc.in /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/glfw3Config.cmake.in /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/deps/glfw/src/glfw_config.h.in /Users/genustori07/Downloads/p2-meshedit-sp23-smesh/CGL/src/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
