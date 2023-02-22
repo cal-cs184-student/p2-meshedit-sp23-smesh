@@ -42,7 +42,14 @@ namespace CGL
   std::vector<Vector3D> BezierPatch::evaluateStep(std::vector<Vector3D> const &points, double t) const
   {
     // TODO Part 2.
-    return std::vector<Vector3D>();
+    std::vector<Vector3D> intermediate_points;
+
+    for (int i = 0; i < points.size()-1; i++) {
+      Vector3D p_i_new = (1 - t) * points[i] + t * points[i+1];
+      intermediate_points.push_back(p_i_new);
+    }
+
+    return intermediate_points;
   }
 
   /**
@@ -55,8 +62,16 @@ namespace CGL
   Vector3D BezierPatch::evaluate1D(std::vector<Vector3D> const &points, double t) const
   {
     // TODO Part 2.
-    return Vector3D();
+
+    std::vector<Vector3D> curr_intermediate_points = evaluateStep(points, t);
+    while (curr_intermediate_points.size() > 1) {
+        curr_intermediate_points = evaluateStep(curr_intermediate_points, t);
+    }
+
+//    std::cout << curr_intermediate_points[0] << endl;
+    return curr_intermediate_points[0];
   }
+
 
   /**
    * Evaluates the Bezier patch at parameter (u, v)
@@ -68,8 +83,16 @@ namespace CGL
   Vector3D BezierPatch::evaluate(double u, double v) const 
   {  
     // TODO Part 2.
-    return Vector3D();
+    std::vector<Vector3D> final_control_points;
+    for (int i = 0; i < BezierPatch::controlPoints.size(); i++) {
+        Vector3D p_i = evaluate1D(BezierPatch::controlPoints[i], u);
+        final_control_points.push_back(p_i);
+    }
+
+    Vector3D final_point = evaluate1D(final_control_points, v);
+    return final_point;
   }
+
 
   Vector3D Vertex::normal( void ) const
   {
