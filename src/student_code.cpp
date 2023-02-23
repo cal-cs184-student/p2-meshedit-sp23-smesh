@@ -100,9 +100,27 @@ namespace CGL
     // Returns an approximate unit normal at this vertex, computed by
     // taking the area-weighted average of the normals of neighboring
     // triangles, then normalizing.
+    HalfedgeCIter h = halfedge();
+    Vector3D wnormal(0,0,0);
 
-    return Vector3D();
+    do {
+        // edge case: do no include boundary surfaces
+        if (!h->face()->isBoundary()) {
+            // get the vertices of triangle and area
+            Vector3D v_0 = position;
+            Vector3D v_1 = h->next()->vertex()->position;
+            Vector3D v_2 = h->next()->next()->vertex()->position;
+
+            double area = cross(v_0, v_1).norm() / 2; // norm of the cross product gives the area of the parallelogram
+            wnormal += h->face()->normal() * area;
+        }
+        h = h->twin()->next();
+    } while (h != halfedge());
+
+//    return Vector3D();
+    return wnormal.unit();
   }
+
 
   EdgeIter HalfedgeMesh::flipEdge( EdgeIter e0 )
   {

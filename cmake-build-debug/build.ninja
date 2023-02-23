@@ -193,8 +193,6 @@ build CGL/deps/glew/CMakeFiles/glew.dir/src/glew.c.o: C_COMPILER__glew_Debug /Us
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include
   OBJECT_DIR = CGL/deps/glew/CMakeFiles/glew.dir
   OBJECT_FILE_DIR = CGL/deps/glew/CMakeFiles/glew.dir/src
-  TARGET_COMPILE_PDB = CGL/deps/glew/CMakeFiles/glew.dir/glew.pdb
-  TARGET_PDB = CGL/deps/glew/libglew.pdb
 
 build CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o: C_COMPILER__glew_Debug /Users/genustori07/Downloads/meshedit/CGL/deps/glew/src/glewinfo.c || cmake_object_order_depends_target_glew
   DEFINES = -DGLEW_STATIC
@@ -203,8 +201,6 @@ build CGL/deps/glew/CMakeFiles/glew.dir/src/glewinfo.c.o: C_COMPILER__glew_Debug
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include
   OBJECT_DIR = CGL/deps/glew/CMakeFiles/glew.dir
   OBJECT_FILE_DIR = CGL/deps/glew/CMakeFiles/glew.dir/src
-  TARGET_COMPILE_PDB = CGL/deps/glew/CMakeFiles/glew.dir/glew.pdb
-  TARGET_PDB = CGL/deps/glew/libglew.pdb
 
 build CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o: C_COMPILER__glew_Debug /Users/genustori07/Downloads/meshedit/CGL/deps/glew/src/visualinfo.c || cmake_object_order_depends_target_glew
   DEFINES = -DGLEW_STATIC
@@ -213,8 +209,6 @@ build CGL/deps/glew/CMakeFiles/glew.dir/src/visualinfo.c.o: C_COMPILER__glew_Deb
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include
   OBJECT_DIR = CGL/deps/glew/CMakeFiles/glew.dir
   OBJECT_FILE_DIR = CGL/deps/glew/CMakeFiles/glew.dir/src
-  TARGET_COMPILE_PDB = CGL/deps/glew/CMakeFiles/glew.dir/glew.pdb
-  TARGET_PDB = CGL/deps/glew/libglew.pdb
 
 
 # =============================================================================
@@ -230,9 +224,8 @@ build CGL/deps/glew/libglew.a: C_STATIC_LIBRARY_LINKER__glew_Debug CGL/deps/glew
   OBJECT_DIR = CGL/deps/glew/CMakeFiles/glew.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CGL/deps/glew/CMakeFiles/glew.dir/glew.pdb
   TARGET_FILE = CGL/deps/glew/libglew.a
-  TARGET_PDB = CGL/deps/glew/libglew.pdb
+  TARGET_PDB = glew.a.dbg
 
 
 #############################################
@@ -403,8 +396,6 @@ build CGL/deps/glfw/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw_Debug 
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src -I/Users/genustori07/Downloads/meshedit/cmake-build-debug/CGL/deps/glfw/src
   OBJECT_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = CGL/deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = CGL/deps/glfw/src/libglfw3.pdb
 
 build CGL/deps/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
@@ -413,8 +404,6 @@ build CGL/deps/glfw/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_Debug /Us
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src -I/Users/genustori07/Downloads/meshedit/cmake-build-debug/CGL/deps/glfw/src
   OBJECT_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = CGL/deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = CGL/deps/glfw/src/libglfw3.pdb
 
 build CGL/deps/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/input.c || cmake_object_order_depends_target_glfw
   DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
@@ -423,8 +412,6 @@ build CGL/deps/glfw/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_Debug /U
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src -I/Users/genustori07/Downloads/meshedit/cmake-build-debug/CGL/deps/glfw/src
   OBJECT_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = CGL/deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = CGL/deps/glfw/src/libglfw3.pdb
 
 build CGL/deps/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
@@ -433,8 +420,6 @@ build CGL/deps/glfw/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_Debug 
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src -I/Users/genustori07/Downloads/meshedit/cmake-build-debug/CGL/deps/glfw/src
   OBJECT_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = CGL/deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = CGL/deps/glfw/src/libglfw3.pdb
 
 build CGL/deps/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
@@ -443,8 +428,6 @@ build CGL/deps/glfw/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_Debug /
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src -I/Users/genustori07/Downloads/meshedit/cmake-build-debug/CGL/deps/glfw/src
   OBJECT_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = CGL/deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = CGL/deps/glfw/src/libglfw3.pdb
 
 build CGL/deps/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/cocoa_init.m || cmake_object_order_depends_target_glfw
   DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
@@ -453,8 +436,6 @@ build CGL/deps/glfw/src/CMakeFiles/glfw.dir/cocoa_init.m.o: C_COMPILER__glfw_Deb
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src -I/Users/genustori07/Downloads/meshedit/cmake-build-debug/CGL/deps/glfw/src
   OBJECT_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = CGL/deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = CGL/deps/glfw/src/libglfw3.pdb
 
 build CGL/deps/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/cocoa_monitor.m || cmake_object_order_depends_target_glfw
   DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
@@ -463,8 +444,6 @@ build CGL/deps/glfw/src/CMakeFiles/glfw.dir/cocoa_monitor.m.o: C_COMPILER__glfw_
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src -I/Users/genustori07/Downloads/meshedit/cmake-build-debug/CGL/deps/glfw/src
   OBJECT_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = CGL/deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = CGL/deps/glfw/src/libglfw3.pdb
 
 build CGL/deps/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/cocoa_window.m || cmake_object_order_depends_target_glfw
   DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
@@ -473,8 +452,6 @@ build CGL/deps/glfw/src/CMakeFiles/glfw.dir/cocoa_window.m.o: C_COMPILER__glfw_D
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src -I/Users/genustori07/Downloads/meshedit/cmake-build-debug/CGL/deps/glfw/src
   OBJECT_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = CGL/deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = CGL/deps/glfw/src/libglfw3.pdb
 
 build CGL/deps/glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/iokit_joystick.m || cmake_object_order_depends_target_glfw
   DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
@@ -483,8 +460,6 @@ build CGL/deps/glfw/src/CMakeFiles/glfw.dir/iokit_joystick.m.o: C_COMPILER__glfw
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src -I/Users/genustori07/Downloads/meshedit/cmake-build-debug/CGL/deps/glfw/src
   OBJECT_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = CGL/deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = CGL/deps/glfw/src/libglfw3.pdb
 
 build CGL/deps/glfw/src/CMakeFiles/glfw.dir/mach_time.c.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/mach_time.c || cmake_object_order_depends_target_glfw
   DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
@@ -493,8 +468,6 @@ build CGL/deps/glfw/src/CMakeFiles/glfw.dir/mach_time.c.o: C_COMPILER__glfw_Debu
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src -I/Users/genustori07/Downloads/meshedit/cmake-build-debug/CGL/deps/glfw/src
   OBJECT_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = CGL/deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = CGL/deps/glfw/src/libglfw3.pdb
 
 build CGL/deps/glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/posix_tls.c || cmake_object_order_depends_target_glfw
   DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
@@ -503,8 +476,6 @@ build CGL/deps/glfw/src/CMakeFiles/glfw.dir/posix_tls.c.o: C_COMPILER__glfw_Debu
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src -I/Users/genustori07/Downloads/meshedit/cmake-build-debug/CGL/deps/glfw/src
   OBJECT_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = CGL/deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = CGL/deps/glfw/src/libglfw3.pdb
 
 build CGL/deps/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o: C_COMPILER__glfw_Debug /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/nsgl_context.m || cmake_object_order_depends_target_glfw
   DEFINES = -DGLEW_STATIC -D_GLFW_USE_CONFIG_H
@@ -513,8 +484,6 @@ build CGL/deps/glfw/src/CMakeFiles/glfw.dir/nsgl_context.m.o: C_COMPILER__glfw_D
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src -I/Users/genustori07/Downloads/meshedit/cmake-build-debug/CGL/deps/glfw/src
   OBJECT_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
-  TARGET_COMPILE_PDB = CGL/deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
-  TARGET_PDB = CGL/deps/glfw/src/libglfw3.pdb
 
 
 # =============================================================================
@@ -530,9 +499,8 @@ build CGL/deps/glfw/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug CGL/deps
   OBJECT_DIR = CGL/deps/glfw/src/CMakeFiles/glfw.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CGL/deps/glfw/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_FILE = CGL/deps/glfw/src/libglfw3.a
-  TARGET_PDB = CGL/deps/glfw/src/libglfw3.pdb
+  TARGET_PDB = glfw3.a.dbg
 
 
 #############################################
@@ -620,8 +588,6 @@ build CGL/src/CMakeFiles/CGL.dir/vector2D.cpp.o: CXX_COMPILER__CGL_Debug /Users/
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/meshedit/CGL/src
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   OBJECT_FILE_DIR = CGL/src/CMakeFiles/CGL.dir
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
-  TARGET_PDB = CGL/src/libCGL.pdb
 
 build CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/meshedit/CGL/src/vector3D.cpp || cmake_object_order_depends_target_CGL
   DEFINES = -DGLEW_STATIC
@@ -630,8 +596,6 @@ build CGL/src/CMakeFiles/CGL.dir/vector3D.cpp.o: CXX_COMPILER__CGL_Debug /Users/
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/meshedit/CGL/src
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   OBJECT_FILE_DIR = CGL/src/CMakeFiles/CGL.dir
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
-  TARGET_PDB = CGL/src/libCGL.pdb
 
 build CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/meshedit/CGL/src/vector4D.cpp || cmake_object_order_depends_target_CGL
   DEFINES = -DGLEW_STATIC
@@ -640,8 +604,6 @@ build CGL/src/CMakeFiles/CGL.dir/vector4D.cpp.o: CXX_COMPILER__CGL_Debug /Users/
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/meshedit/CGL/src
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   OBJECT_FILE_DIR = CGL/src/CMakeFiles/CGL.dir
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
-  TARGET_PDB = CGL/src/libCGL.pdb
 
 build CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/meshedit/CGL/src/matrix3x3.cpp || cmake_object_order_depends_target_CGL
   DEFINES = -DGLEW_STATIC
@@ -650,8 +612,6 @@ build CGL/src/CMakeFiles/CGL.dir/matrix3x3.cpp.o: CXX_COMPILER__CGL_Debug /Users
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/meshedit/CGL/src
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   OBJECT_FILE_DIR = CGL/src/CMakeFiles/CGL.dir
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
-  TARGET_PDB = CGL/src/libCGL.pdb
 
 build CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/meshedit/CGL/src/matrix4x4.cpp || cmake_object_order_depends_target_CGL
   DEFINES = -DGLEW_STATIC
@@ -660,8 +620,6 @@ build CGL/src/CMakeFiles/CGL.dir/matrix4x4.cpp.o: CXX_COMPILER__CGL_Debug /Users
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/meshedit/CGL/src
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   OBJECT_FILE_DIR = CGL/src/CMakeFiles/CGL.dir
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
-  TARGET_PDB = CGL/src/libCGL.pdb
 
 build CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/meshedit/CGL/src/quaternion.cpp || cmake_object_order_depends_target_CGL
   DEFINES = -DGLEW_STATIC
@@ -670,8 +628,6 @@ build CGL/src/CMakeFiles/CGL.dir/quaternion.cpp.o: CXX_COMPILER__CGL_Debug /User
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/meshedit/CGL/src
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   OBJECT_FILE_DIR = CGL/src/CMakeFiles/CGL.dir
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
-  TARGET_PDB = CGL/src/libCGL.pdb
 
 build CGL/src/CMakeFiles/CGL.dir/complex.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/meshedit/CGL/src/complex.cpp || cmake_object_order_depends_target_CGL
   DEFINES = -DGLEW_STATIC
@@ -680,8 +636,6 @@ build CGL/src/CMakeFiles/CGL.dir/complex.cpp.o: CXX_COMPILER__CGL_Debug /Users/g
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/meshedit/CGL/src
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   OBJECT_FILE_DIR = CGL/src/CMakeFiles/CGL.dir
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
-  TARGET_PDB = CGL/src/libCGL.pdb
 
 build CGL/src/CMakeFiles/CGL.dir/color.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/meshedit/CGL/src/color.cpp || cmake_object_order_depends_target_CGL
   DEFINES = -DGLEW_STATIC
@@ -690,8 +644,6 @@ build CGL/src/CMakeFiles/CGL.dir/color.cpp.o: CXX_COMPILER__CGL_Debug /Users/gen
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/meshedit/CGL/src
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   OBJECT_FILE_DIR = CGL/src/CMakeFiles/CGL.dir
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
-  TARGET_PDB = CGL/src/libCGL.pdb
 
 build CGL/src/CMakeFiles/CGL.dir/osdtext.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/meshedit/CGL/src/osdtext.cpp || cmake_object_order_depends_target_CGL
   DEFINES = -DGLEW_STATIC
@@ -700,8 +652,6 @@ build CGL/src/CMakeFiles/CGL.dir/osdtext.cpp.o: CXX_COMPILER__CGL_Debug /Users/g
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/meshedit/CGL/src
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   OBJECT_FILE_DIR = CGL/src/CMakeFiles/CGL.dir
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
-  TARGET_PDB = CGL/src/libCGL.pdb
 
 build CGL/src/CMakeFiles/CGL.dir/osdfont.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/meshedit/CGL/src/osdfont.cpp || cmake_object_order_depends_target_CGL
   DEFINES = -DGLEW_STATIC
@@ -710,8 +660,6 @@ build CGL/src/CMakeFiles/CGL.dir/osdfont.cpp.o: CXX_COMPILER__CGL_Debug /Users/g
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/meshedit/CGL/src
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   OBJECT_FILE_DIR = CGL/src/CMakeFiles/CGL.dir
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
-  TARGET_PDB = CGL/src/libCGL.pdb
 
 build CGL/src/CMakeFiles/CGL.dir/viewer.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/meshedit/CGL/src/viewer.cpp || cmake_object_order_depends_target_CGL
   DEFINES = -DGLEW_STATIC
@@ -720,8 +668,6 @@ build CGL/src/CMakeFiles/CGL.dir/viewer.cpp.o: CXX_COMPILER__CGL_Debug /Users/ge
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/meshedit/CGL/src
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   OBJECT_FILE_DIR = CGL/src/CMakeFiles/CGL.dir
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
-  TARGET_PDB = CGL/src/libCGL.pdb
 
 build CGL/src/CMakeFiles/CGL.dir/base64.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/meshedit/CGL/src/base64.cpp || cmake_object_order_depends_target_CGL
   DEFINES = -DGLEW_STATIC
@@ -730,8 +676,6 @@ build CGL/src/CMakeFiles/CGL.dir/base64.cpp.o: CXX_COMPILER__CGL_Debug /Users/ge
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/meshedit/CGL/src
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   OBJECT_FILE_DIR = CGL/src/CMakeFiles/CGL.dir
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
-  TARGET_PDB = CGL/src/libCGL.pdb
 
 build CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.o: CXX_COMPILER__CGL_Debug /Users/genustori07/Downloads/meshedit/CGL/src/tinyxml2.cpp || cmake_object_order_depends_target_CGL
   DEFINES = -DGLEW_STATIC
@@ -740,8 +684,6 @@ build CGL/src/CMakeFiles/CGL.dir/tinyxml2.cpp.o: CXX_COMPILER__CGL_Debug /Users/
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/Users/genustori07/Downloads/meshedit/CGL/deps/glew/include -I/usr/local/include/freetype2 -I/Users/genustori07/Downloads/meshedit/CGL/src
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   OBJECT_FILE_DIR = CGL/src/CMakeFiles/CGL.dir
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
-  TARGET_PDB = CGL/src/libCGL.pdb
 
 
 # =============================================================================
@@ -757,9 +699,8 @@ build CGL/src/libCGL.a: CXX_STATIC_LIBRARY_LINKER__CGL_Debug CGL/src/CMakeFiles/
   OBJECT_DIR = CGL/src/CMakeFiles/CGL.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CGL/src/CMakeFiles/CGL.dir/CGL.pdb
   TARGET_FILE = CGL/src/libCGL.a
-  TARGET_PDB = CGL/src/libCGL.pdb
+  TARGET_PDB = CGL.a.dbg
 
 
 #############################################
@@ -846,8 +787,6 @@ build src/CMakeFiles/meshedit.dir/bezierPatch.cpp.o: CXX_COMPILER__meshedit_Debu
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 build src/CMakeFiles/meshedit.dir/bezierCurve.cpp.o: CXX_COMPILER__meshedit_Debug /Users/genustori07/Downloads/meshedit/src/bezierCurve.cpp || cmake_object_order_depends_target_meshedit
   DEP_FILE = src/CMakeFiles/meshedit.dir/bezierCurve.cpp.o.d
@@ -855,8 +794,6 @@ build src/CMakeFiles/meshedit.dir/bezierCurve.cpp.o: CXX_COMPILER__meshedit_Debu
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 build src/CMakeFiles/meshedit.dir/scene.cpp.o: CXX_COMPILER__meshedit_Debug /Users/genustori07/Downloads/meshedit/src/scene.cpp || cmake_object_order_depends_target_meshedit
   DEP_FILE = src/CMakeFiles/meshedit.dir/scene.cpp.o.d
@@ -864,8 +801,6 @@ build src/CMakeFiles/meshedit.dir/scene.cpp.o: CXX_COMPILER__meshedit_Debug /Use
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 build src/CMakeFiles/meshedit.dir/camera.cpp.o: CXX_COMPILER__meshedit_Debug /Users/genustori07/Downloads/meshedit/src/camera.cpp || cmake_object_order_depends_target_meshedit
   DEP_FILE = src/CMakeFiles/meshedit.dir/camera.cpp.o.d
@@ -873,8 +808,6 @@ build src/CMakeFiles/meshedit.dir/camera.cpp.o: CXX_COMPILER__meshedit_Debug /Us
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 build src/CMakeFiles/meshedit.dir/light.cpp.o: CXX_COMPILER__meshedit_Debug /Users/genustori07/Downloads/meshedit/src/light.cpp || cmake_object_order_depends_target_meshedit
   DEP_FILE = src/CMakeFiles/meshedit.dir/light.cpp.o.d
@@ -882,8 +815,6 @@ build src/CMakeFiles/meshedit.dir/light.cpp.o: CXX_COMPILER__meshedit_Debug /Use
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 build src/CMakeFiles/meshedit.dir/mesh.cpp.o: CXX_COMPILER__meshedit_Debug /Users/genustori07/Downloads/meshedit/src/mesh.cpp || cmake_object_order_depends_target_meshedit
   DEP_FILE = src/CMakeFiles/meshedit.dir/mesh.cpp.o.d
@@ -891,8 +822,6 @@ build src/CMakeFiles/meshedit.dir/mesh.cpp.o: CXX_COMPILER__meshedit_Debug /User
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 build src/CMakeFiles/meshedit.dir/material.cpp.o: CXX_COMPILER__meshedit_Debug /Users/genustori07/Downloads/meshedit/src/material.cpp || cmake_object_order_depends_target_meshedit
   DEP_FILE = src/CMakeFiles/meshedit.dir/material.cpp.o.d
@@ -900,8 +829,6 @@ build src/CMakeFiles/meshedit.dir/material.cpp.o: CXX_COMPILER__meshedit_Debug /
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 build src/CMakeFiles/meshedit.dir/texture.cpp.o: CXX_COMPILER__meshedit_Debug /Users/genustori07/Downloads/meshedit/src/texture.cpp || cmake_object_order_depends_target_meshedit
   DEP_FILE = src/CMakeFiles/meshedit.dir/texture.cpp.o.d
@@ -909,8 +836,6 @@ build src/CMakeFiles/meshedit.dir/texture.cpp.o: CXX_COMPILER__meshedit_Debug /U
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 build src/CMakeFiles/meshedit.dir/collada.cpp.o: CXX_COMPILER__meshedit_Debug /Users/genustori07/Downloads/meshedit/src/collada.cpp || cmake_object_order_depends_target_meshedit
   DEP_FILE = src/CMakeFiles/meshedit.dir/collada.cpp.o.d
@@ -918,8 +843,6 @@ build src/CMakeFiles/meshedit.dir/collada.cpp.o: CXX_COMPILER__meshedit_Debug /U
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 build src/CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o: CXX_COMPILER__meshedit_Debug /Users/genustori07/Downloads/meshedit/src/halfEdgeMesh.cpp || cmake_object_order_depends_target_meshedit
   DEP_FILE = src/CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o.d
@@ -927,8 +850,6 @@ build src/CMakeFiles/meshedit.dir/halfEdgeMesh.cpp.o: CXX_COMPILER__meshedit_Deb
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 build src/CMakeFiles/meshedit.dir/student_code.cpp.o: CXX_COMPILER__meshedit_Debug /Users/genustori07/Downloads/meshedit/src/student_code.cpp || cmake_object_order_depends_target_meshedit
   DEP_FILE = src/CMakeFiles/meshedit.dir/student_code.cpp.o.d
@@ -936,8 +857,6 @@ build src/CMakeFiles/meshedit.dir/student_code.cpp.o: CXX_COMPILER__meshedit_Deb
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 build src/CMakeFiles/meshedit.dir/meshEdit.cpp.o: CXX_COMPILER__meshedit_Debug /Users/genustori07/Downloads/meshedit/src/meshEdit.cpp || cmake_object_order_depends_target_meshedit
   DEP_FILE = src/CMakeFiles/meshedit.dir/meshEdit.cpp.o.d
@@ -945,8 +864,6 @@ build src/CMakeFiles/meshedit.dir/meshEdit.cpp.o: CXX_COMPILER__meshedit_Debug /
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 build src/CMakeFiles/meshedit.dir/main.cpp.o: CXX_COMPILER__meshedit_Debug /Users/genustori07/Downloads/meshedit/src/main.cpp || cmake_object_order_depends_target_meshedit
   DEP_FILE = src/CMakeFiles/meshedit.dir/main.cpp.o.d
@@ -954,8 +871,6 @@ build src/CMakeFiles/meshedit.dir/main.cpp.o: CXX_COMPILER__meshedit_Debug /User
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 build src/CMakeFiles/meshedit.dir/png.cpp.o: CXX_COMPILER__meshedit_Debug /Users/genustori07/Downloads/meshedit/src/png.cpp || cmake_object_order_depends_target_meshedit
   DEP_FILE = src/CMakeFiles/meshedit.dir/png.cpp.o.d
@@ -963,8 +878,6 @@ build src/CMakeFiles/meshedit.dir/png.cpp.o: CXX_COMPILER__meshedit_Debug /Users
   INCLUDES = -I/Users/genustori07/Downloads/meshedit/CGL/include -I/usr/local/include/freetype2
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   OBJECT_FILE_DIR = src/CMakeFiles/meshedit.dir
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
-  TARGET_PDB = meshedit.pdb
 
 
 # =============================================================================
@@ -980,9 +893,8 @@ build meshedit: CXX_EXECUTABLE_LINKER__meshedit_Debug src/CMakeFiles/meshedit.di
   OBJECT_DIR = src/CMakeFiles/meshedit.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = src/CMakeFiles/meshedit.dir/
   TARGET_FILE = meshedit
-  TARGET_PDB = meshedit.pdb
+  TARGET_PDB = meshedit.dbg
 
 
 #############################################
@@ -1130,14 +1042,14 @@ build src/all: phony meshedit
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindFreetype.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindOpenGL.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /Users/genustori07/Downloads/meshedit/CGL/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glew/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/cmake_uninstall.cmake.in /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/glfw3.pc.in /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/glfw3Config.cmake.in /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/glfw_config.h.in /Users/genustori07/Downloads/meshedit/CGL/src/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CMakeLists.txt /Users/genustori07/Downloads/meshedit/src/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindFreetype.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindOpenGL.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /Users/genustori07/Downloads/meshedit/CGL/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glew/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/cmake_uninstall.cmake.in /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/glfw3.pc.in /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/glfw3Config.cmake.in /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/glfw_config.h.in /Users/genustori07/Downloads/meshedit/CGL/src/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CMakeLists.txt /Users/genustori07/Downloads/meshedit/src/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCCompilerABI.c /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystem.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindFreetype.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindOpenGL.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Determine-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /Users/genustori07/Downloads/meshedit/CGL/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glew/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/cmake_uninstall.cmake.in /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/glfw3.pc.in /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/glfw3Config.cmake.in /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/glfw_config.h.in /Users/genustori07/Downloads/meshedit/CGL/src/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CMakeLists.txt /Users/genustori07/Downloads/meshedit/src/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindFreetype.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindOpenGL.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /Users/genustori07/Downloads/meshedit/CGL/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glew/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/cmake_uninstall.cmake.in /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/glfw3.pc.in /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/glfw3Config.cmake.in /Users/genustori07/Downloads/meshedit/CGL/deps/glfw/src/glfw_config.h.in /Users/genustori07/Downloads/meshedit/CGL/src/CMakeLists.txt /Users/genustori07/Downloads/meshedit/CMakeLists.txt /Users/genustori07/Downloads/meshedit/src/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
 
 
 #############################################
