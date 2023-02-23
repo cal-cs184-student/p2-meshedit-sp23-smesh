@@ -221,7 +221,12 @@
   Briefly explain how you implemented the area-weighted vertex normals.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+    Given the halfedge constant within the Vertex class, we need to find the area and the normal of the face and weight base on
+    its area. Since we don't want to iterate through the boundary, we first check that the face is not a boundary. If it is not,
+    we want to get the position of the 3 vertices using h->next()->vertex()->position and h->next()->next()->vertex()->position.
+    Using these, the norm of the cross product of the two edges gives the area of the parallelogram, so the triangle's area is half
+    that. We multiply the weighted normal vector by this area to weight the normal. Iterate through all the faces incident to the vertex
+    and repeat this process. At the end, we normalize the weighted vector.
 </p>
 <br>
 
@@ -230,7 +235,18 @@
   Show screenshots of dae/teapot.dae (not .bez) comparing teapot shading with and without vertex normals. Use <kbd>Q</kbd> to toggle default flat shading and Phong shading.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+    <table style="width:100%">
+        <tr align="center">
+            <td>
+                <img src="p3_1.png" align="middle" width="400px"/>
+                <figcaption>Before</figcaption>
+            </td>
+            <td>
+                <img src="p3_2.png" align="middle" width="400px"/>
+                <figcaption>After</figcaption>
+            </td>
+        </tr>
+    </table>
 </p>
 <br>
 
@@ -240,7 +256,7 @@
   Briefly explain how you implemented the edge flip operation and describe any interesting implementation / debugging tricks you have used.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+   YOUR RESPONSE GOES HERE
 </p>
 <br>
 
