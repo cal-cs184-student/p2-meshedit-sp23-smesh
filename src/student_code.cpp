@@ -1,5 +1,6 @@
 #include "student_code.h"
 #include "mutablePriorityQueue.h"
+#include "algorithm"
 
 using namespace std;
 
@@ -126,7 +127,87 @@ namespace CGL
   {
     // TODO Part 4.
     // This method should flip the given edge and return an iterator to the flipped edge.
-    return EdgeIter();
+    if (!e0->isBoundary()) {
+        // do inner and outer boundaries is the edge is not a boundary
+//        list<HalfedgeIter> inner_halfedges;
+//        HalfedgeIter h = e0->halfedge();
+//        HalfedgeIter start = e0->halfedge();
+//
+//        inner_halfedges.push_back(h);
+//        do {
+//            inner_halfedges.push_back(h->next());
+//            h = h->next();
+//        } while (h != start);
+//
+//        // get all the outer edges
+//        list<HalfedgeIter> outer_halfedges;
+//        outer_halfedges.push_back(h->twin());
+//        do {
+//            outer_halfedges.push_back(h->twin());
+//            h = h->next();
+//        } while (h != start);
+
+        // inner edges
+        HalfedgeIter h_in = e0->halfedge();
+        HalfedgeIter h_in_1 = h_in->next();
+        HalfedgeIter h_in_2 = h_in_1->next();
+        HalfedgeIter h_in_3 = h_in->twin();
+        HalfedgeIter h_in_4 = h_in_3->next();
+        HalfedgeIter h_in_5 = h_in_4->next();
+        //outer edges
+        HalfedgeIter h_out_6 = h_in_1->twin();
+        HalfedgeIter h_out_7 = h_in_2->twin();
+        HalfedgeIter h_out_8 = h_in_4->twin();
+        HalfedgeIter h_out_9 = h_in_5->twin();
+        // vertices
+        VertexIter b = h_in->vertex(); //v0
+        VertexIter a = h_in_2->vertex(); //v2
+        VertexIter c = h_in_3->vertex(); //v1
+        VertexIter d = h_in_5->vertex(); //v3
+        // faces
+        FaceIter f1 = h_in->face();
+        FaceIter f2 = h_in_3->face();
+        // edges
+        EdgeIter e1 = h_in_1->edge();
+        EdgeIter e2 = h_in_2->edge();
+        EdgeIter e3 = h_in_4->edge();
+        EdgeIter e4 = h_in_5->edge();
+
+        // recreate the mesh
+        // next, twin, vertex, edge, face
+        h_in->setNeighbors(h_in_1,h_in_3,a , e0, f1);
+        h_in_1->setNeighbors(h_in_2,h_out_9,d,e4,f1);
+        h_in_2->setNeighbors(h_in,h_out_6,c,e1,f1);
+        h_in_3->setNeighbors(h_in_4,h_in,d, e0,f2);
+        h_in_4->setNeighbors(h_in_5,h_out_7,a,e2,f2);
+        h_in_5->setNeighbors(h_in_3,h_out_8,b,e3,f2);
+
+        h_out_6->setNeighbors(h_out_6->next(),h_in_2,a ,e1,h_out_6->face());
+        h_out_7->setNeighbors(h_out_7->next(),h_in_4,b,e2,h_out_7->face());
+        h_out_8->setNeighbors(h_out_8->next(),h_in_5, d, e3, h_out_8->face());
+        h_out_9->setNeighbors(h_out_9->next(),h_in_1,c,e4,h_out_9->face());
+
+        // Vertices
+        b->halfedge() = h_in_5;
+        c->halfedge() = h_in_2;
+        a->halfedge() = h_in_4;
+        d->halfedge() = h_in_1;
+
+        // Edges
+        e0->halfedge() = h_in;
+        e1->halfedge() = h_in_2;
+        e2->halfedge() = h_in_4;
+        e3->halfedge() = h_in_5;
+        e4->halfedge() = h_in_1;
+
+        // Faces
+        f1->halfedge() = h_in;
+        f2->halfedge() = h_in_3;
+
+    }
+
+//    return EdgeIter();
+    return e0;
   }
 
   VertexIter HalfedgeMesh::splitEdge( EdgeIter e0 )
