@@ -41,7 +41,7 @@
 
 <h1 align="middle">CS 184: Computer Graphics and Imaging, Spring 2023</h1>
 <h1 align="middle">Project 2: Mesh Edit</h1>
-<h2 align="middle">Reina Wang (CS184-acb), Maggie Yi (CS184-acf)</h2>
+<h2 align="middle">Chi-Feng Wang (CS184-acb), Maggie Yi (CS184-acf)</h2>
 
 <br><br>
 
@@ -50,7 +50,7 @@
 
 <h2 align="middle">Overview</h2>
 <p>
-    YOUR RESPONSE GOES HERE
+    For this project, we built Bezier curves and surfaces and manipulated and changed triangle meshes. We went from being able to model curves in 2D to meshes in 3D, and being able to manipulate those curves and surfaces.
 </p>
 <br>
 
@@ -256,7 +256,11 @@
   Briefly explain how you implemented the edge flip operation and describe any interesting implementation / debugging tricks you have used.
 </b>
 <p>
-    You just draw a picture and match everything and reconnect everything. Boom. Done.
+    For the edge flip operation, we need to first define all necessary components: the inner and outer half-edges, the vertices, the faces, and the edges.
+    These components can be defined by traversing the mesh starting from e0, using next(), twin(), vertex(), surface(), and edge().
+    Then, we recreate the surface of the mesh by reconnecting edges after the flipped edge.
+    We use setNeighbors() to update the half-edges after the edge has been flipped. We update the corresponding half-edge of each vertex, edge, and face as well.
+    For debugging, we used the teapot and flipped edges to test our code out, so that we can visualize what the newly defined half-edges are.
 </p>
 <br>
 
@@ -281,13 +285,13 @@
 <br>
 
 
-<b>
-    Write about your eventful debugging journey, if you have experienced one.
-</b>
-<p>
-    YOUR RESPONSE GOES HERE
-</p>
-<br>
+<!--<b>-->
+<!--    Write about your eventful debugging journey, if you have experienced one.-->
+<!--</b>-->
+<!--<p>-->
+<!--    YOUR RESPONSE GOES HERE-->
+<!--</p>-->
+<!--<br>-->
 
 
 <h3 align="middle">Part 5: Edge Split</h3>
@@ -295,7 +299,9 @@
   Briefly explain how you implemented the edge split operation and describe any interesting implementation / debugging tricks you have used.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+    The structure of the edge split operation is very similar to the edge flip operation. First, we defined all necessary components through traversing the mesh from e0, similar to part 4: the inner and outer half-edges, the vertices, the faces, and the edges.
+    Then, we create a new vertex, two new triangles, and three new edges (technically there are 4 total edges in the diamond, but we only need 3 new edges as we can shrink the original in half).
+    We update the pointers to the correct element in the modified mesh, setting the half-edge pointer for each vertex, edge, and face; and setting the next, twin, vertex, edge, and face pointer for each half-edge. Then, we removed the unnecessary pointer assignments once it is working.
 </p>
 <br>
 
@@ -318,12 +324,10 @@
 <br>
 
 
-<b>
-    Write about your eventful debugging journey, if you have experienced one.
-</b>
-<p>
-    YOUR RESPONSE GOES HERE
-</p>
+<!--<b>-->
+<!--    Write about your eventful debugging journey, if you have experienced one.-->
+<!--<p>-->
+<!--    YOUR RESPONSE GOES HERE-->
 <br>
 
 
@@ -342,6 +346,13 @@
 </b>
 <p>
     YOUR RESPONSE GOES HERE
+    We followed the breakdown in the comments. First, we computed new positions for all the vertices in the input mesh. We computed a weighting for each vertice using the loop subdivision rule presented in lecture:
+    (1 - n*u)*current position + u * weighted average of all neighboring vertices, where n is the degree of the vertex, and u is a weighting factor.
+    Then, we computed the updated vertex positions associated with edges, using the formula 3/8 * (A + B) + 1/8 * (C + D) given in the spec.
+    Then, we split every edge in the mesh, making sure that we are only iterating through the original edges by storing all the original edges in a vector beforehand. We traverse all the newly created edges connected to the new point
+    created by the edge split, and mark whether it is a new or old edge. We then iterate through all edges and flip any new edge that connects an old and new vertex.
+    Finally, we copy the new vertex positions into final vertex position.
+
 </p>
 <br>
 
