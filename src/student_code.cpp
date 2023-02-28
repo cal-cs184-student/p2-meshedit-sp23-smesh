@@ -292,12 +292,29 @@ namespace CGL
         d->halfedge() = h_in_5;
         m->halfedge() = h_in;
 
+        // update edge connections
+        e0->halfedge() = h_in;
+        e1->halfedge() = h_in_1;
+        e2->halfedge() = h_in_12;
+        e3->halfedge() = h_in_14;
+        e4->halfedge() = h_in_5;
+        e5->halfedge() = h_in_2;
+        e6->halfedge() = h_in_10;
+        e7->halfedge() = h_in_4;
 
+        // update isNew
+        e0->isNew = 0;
+        e5->isNew = 1;
+        e6->isNew = 0;
+        e7->isNew = 1;
 
+        // Faces
+        f1->halfedge() = h_in;
+        f2->halfedge() = h_in_3;
+        f3->halfedge() = h_in_10;
+        f4->halfedge() = h_in_13;
 
-
-
-
+        return m;
     }
     return VertexIter();
   }
