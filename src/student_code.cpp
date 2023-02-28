@@ -348,7 +348,7 @@ namespace CGL
           viter->isNew = false;
       }
 
-      // 2. Compute the updated vertex positions associated with edges, and store it in Edge::newPosition.
+    // 2. Compute the updated vertex positions associated with edges, and store it in Edge::newPosition.
       for (EdgeIter eiter = mesh.edgesBegin(); eiter != mesh.edgesEnd(); eiter++) {
           // Finding the positions of all four nearby vertices, as per the spec
           Vector3D A = eiter->halfedge()->vertex()->position;
@@ -359,12 +359,11 @@ namespace CGL
           eiter->newPosition = ((float(3) / float(8)) * (A + B)) + ((float(1) / float(8)) * (C + D));
       }
 
-
-      // 3. Split every edge in the mesh, in any order. For future reference, we're also going to store some
-      // information about which subdivide edges come from splitting an edge in the original mesh, and which edges
-      // are new, by setting the flat Edge::isNew. Note that in this loop, we only want to iterate over edges of
-      // the original mesh---otherwise, we'll end up splitting edges that we just split (and the loop will never end!)
-
+    // 3. Split every edge in the mesh, in any order. For future reference, we're also going to store some
+    // information about which subdivide edges come from splitting an edge in the original mesh, and which edges
+    // are new, by setting the flat Edge::isNew. Note that in this loop, we only want to iterate over edges of
+    // the original mesh---otherwise, we'll end up splitting edges that we just split (and the loop will never end!)
+    
       // Store all original edges
       vector<EdgeIter> originalEdges;
       for (EdgeIter eiter = mesh.edgesBegin(); eiter != mesh.edgesEnd(); eiter++) {
@@ -392,8 +391,7 @@ namespace CGL
           } while (hiter != newPoint->halfedge());
       }
 
-
-      // 4. Flip any new edge that connects an old and new vertex.
+    // 4. Flip any new edge that connects an old and new vertex.
       for (EdgeIter eiter = mesh.edgesBegin(); eiter != mesh.edgesEnd(); eiter++) {
           VertexIter A = eiter->halfedge()->vertex();
           VertexIter B = eiter->halfedge()->twin()->vertex();
@@ -402,7 +400,7 @@ namespace CGL
           }
       }
 
-      // 5. Copy the new vertex positions into final Vertex::position.
+    // 5. Copy the new vertex positions into final Vertex::position.
       for (VertexIter viter = mesh.verticesBegin(); viter != mesh.verticesEnd(); viter++) {
           // TODO: not sure if I should be checking isNew?
           viter->position = viter->newPosition;
