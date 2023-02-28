@@ -215,108 +215,119 @@ namespace CGL
     // TODO Part 5.
     // This method should split the given edge and return an iterator to the newly inserted vertex.
     // The halfedge of this vertex should point along the edge that was split, rather than the new edges.
-    if (!e0->isBoundary()) {
-        // inner edges
-        HalfedgeIter h_in = e0->halfedge();
-        HalfedgeIter h_in_1 = h_in->next();
-        HalfedgeIter h_in_2 = h_in_1->next();
-        HalfedgeIter h_in_3 = h_in->twin();
-        HalfedgeIter h_in_4 = h_in_3->next();
-        HalfedgeIter h_in_5 = h_in_4->next();
-        //outer edges
-        HalfedgeIter h_out_6 = h_in_1->twin();
-        HalfedgeIter h_out_7 = h_in_2->twin();
-        HalfedgeIter h_out_8 = h_in_4->twin();
-        HalfedgeIter h_out_9 = h_in_5->twin();
-        // vertices
-        VertexIter b = h_in->vertex(); //v0
-        VertexIter a = h_in_2->vertex(); //v2
-        VertexIter c = h_in_3->vertex(); //v1
-        VertexIter d = h_in_5->vertex(); //v3
-        // faces
-        FaceIter f1 = h_in->face();
-        FaceIter f2 = h_in_3->face();
-        // edges
-        EdgeIter e1 = h_in_1->edge();
-        EdgeIter e2 = h_in_2->edge();
-        EdgeIter e3 = h_in_4->edge();
-        EdgeIter e4 = h_in_5->edge();
+      if (!e0->isBoundary()) {
+          // ---------------- DEFINITIONS ---------------------
 
-        // new elements
-        VertexIter m = newVertex();
-        m->isNew = 1;
+          // all halfedges
+          HalfedgeIter h_in = e0->halfedge();
+          HalfedgeIter h_in_1 = h_in->next();
+          HalfedgeIter h_in_2 = h_in_1->next();
+          HalfedgeIter h_in_3 = h_in->twin();
+          HalfedgeIter h_in_4 = h_in_3->next();
+          HalfedgeIter h_in_5 = h_in_4->next();
 
-        // new inner half edges: 8 of them, but only need to create 6
-        // 2 of them can just be split into 2 half edges
-        HalfedgeIter h_in_10 = newHalfedge();
-        HalfedgeIter h_in_11 = newHalfedge();
-        HalfedgeIter h_in_12 = newHalfedge();
-        HalfedgeIter h_in_13 = newHalfedge();
-        HalfedgeIter h_in_14 = newHalfedge();
-        HalfedgeIter h_in_15 = newHalfedge();
+          HalfedgeIter h_out_6 = h_in_1->twin();
+          HalfedgeIter h_out_7 = h_in_2->twin();
+          HalfedgeIter h_out_8 = h_in_4->twin();
+          HalfedgeIter h_out_9 = h_in_5->twin();
 
-        // new edges: 4 total, but only needs 3 since we can just shrink one of them in half
-        EdgeIter e5 = newEdge();
-        EdgeIter e6 = newEdge();
-        EdgeIter e7 = newEdge();
+          // all edges
+          EdgeIter e1 = h_in_1->edge();
+          EdgeIter e2 = h_in_2->edge();
+          EdgeIter e3 = h_in_4->edge();
+          EdgeIter e4 = h_in_5->edge();
 
-        // new faces
-        FaceIter f3 = newFace();
-        FaceIter f4 = newFace();
+          // all faces
+          FaceIter f1 = h_in->face();
+          FaceIter f2 = h_in_3->face();
 
-        // re-mesh
-        // next, twin, vertex, edge, face
-        h_in->setNeighbors(h_in_1,h_in_3,m,e0,f1);
-        h_in_1->setNeighbors(h_in_2,h_out_6,c,e1,f1);
-        h_in_2->setNeighbors(h_in,h_in_11,a,e5,f1);
-        h_in_3->setNeighbors(h_in_4,h_in,c,e0,f2);
-        h_in_4->setNeighbors(h_in_5,h_in_15,m,e7,f2);
-        h_in_5->setNeighbors(h_in_3,h_out_9,d,e4,f2);
-        h_out_6->setNeighbors(h_out_6->next(),h_in_1,a,e1,h_out_6->face());
-        h_out_7->setNeighbors(h_out_7->next(),h_in_12,b,e2,h_out_7->face());
-        h_out_8->setNeighbors(h_out_8->next(),h_in_14,d,e3,h_out_8->face());
-        h_out_9->setNeighbors(h_out_9->next(),h_in_5,c,e4,h_out_9->face());
-        h_in_10->setNeighbors(h_in_11,h_in_13,b,e6,f3);
-        h_in_11->setNeighbors(h_in_12,h_in_2,m,e5,f3);
-        h_in_12->setNeighbors(h_in_10,h_out_7,a,e2,f3);
-        h_in_13->setNeighbors(h_in_14,h_in_10,m,e6,f4);
-        h_in_14->setNeighbors(h_in_15,h_out_8,b,e3,f4);
-        h_in_15->setNeighbors(h_in_13,h_in_4,d,e7,f4);
+          // all vertices
+          VertexIter b = h_in->vertex();
+          VertexIter c = h_in_3->vertex();
+          VertexIter a = h_in_2->vertex();
+          VertexIter d = h_in_5->vertex();
 
-        // add details about new vertex
-        m->position = 0.5 * (b->position + c->position);
 
-        b->halfedge() = h_in_10;
-        c->halfedge() = h_in_1;
-        a->halfedge() = h_in_12;
-        d->halfedge() = h_in_5;
-        m->halfedge() = h_in;
+          // *************** new elements ***************
+          // new inner edges
+          HalfedgeIter h_in_10 = newHalfedge();
+          HalfedgeIter h_in_11 = newHalfedge();
+          HalfedgeIter h_in_12 = newHalfedge();
+          HalfedgeIter h_in_13 = newHalfedge();
+          HalfedgeIter h_in_14 = newHalfedge();
+          HalfedgeIter h_in_15 = newHalfedge();
 
-        // update edge connections
-        e0->halfedge() = h_in;
-        e1->halfedge() = h_in_1;
-        e2->halfedge() = h_in_12;
-        e3->halfedge() = h_in_14;
-        e4->halfedge() = h_in_5;
-        e5->halfedge() = h_in_2;
-        e6->halfedge() = h_in_10;
-        e7->halfedge() = h_in_4;
+          // new edges
+          EdgeIter e5 = newEdge();
+          EdgeIter e6 = newEdge();
+          EdgeIter e7 = newEdge();
 
-        // update isNew
-        e0->isNew = 0;
-        e5->isNew = 1;
-        e6->isNew = 0;
-        e7->isNew = 1;
+          // new faces
+          FaceIter f3 = newFace();
+          FaceIter f4 = newFace();
 
-        // Faces
-        f1->halfedge() = h_in;
-        f2->halfedge() = h_in_3;
-        f3->halfedge() = h_in_10;
-        f4->halfedge() = h_in_13;
+          // new vertex
+          VertexIter m = newVertex();
 
-        return m;
-    }
-    return VertexIter();
+
+          // *************** updates ***************
+          // update halfedge connections
+          h_in->setNeighbors(h_in_1, h_in_3, m, e0, f1);
+          h_in_1->setNeighbors(h_in_2, h_out_6, c, e1, f1);
+          h_in_2->setNeighbors(h_in, h_in_11, a, e5, f1);
+          h_in_3->setNeighbors(h_in_4, h_in, c, e0, f2);
+          h_in_4->setNeighbors(h_in_5, h_in_15, m, e7, f2);
+          h_in_5->setNeighbors(h_in_3, h_out_9, d, e4, f2);
+          h_out_6->setNeighbors(h_out_6->next(), h_in_1, a, e1, h_out_6->face());
+          h_out_7->setNeighbors(h_out_7->next(), h_in_12, b, e2, h_out_7->face());
+          h_out_8->setNeighbors(h_out_8->next(), h_in_14, d, e3, h_out_8->face());
+          h_out_9->setNeighbors(h_out_9->next(), h_in_5, c, e4, h_out_9->face());
+          h_in_10->setNeighbors(h_in_11, h_in_13, b, e6, f3);
+          h_in_11->setNeighbors(h_in_12, h_in_2, m, e5, f3);
+          h_in_12->setNeighbors(h_in_10, h_out_7, a, e2, f3);
+          h_in_13->setNeighbors(h_in_14, h_in_10, m, e6, f4);
+          h_in_14->setNeighbors(h_in_15, h_out_8, b, e3, f4);
+          h_in_15->setNeighbors(h_in_13, h_in_4, d, e7, f4);
+
+          // updates for new vertex
+          m->isNew = 1;
+          m->position = 0.5 * (b->position + c->position);
+
+          // updates vertex halfedges
+          m->halfedge() = h_in;
+          b->halfedge() = h_in_10;
+          c->halfedge() = h_in_1;
+          a->halfedge() = h_in_12;
+          d->halfedge() = h_in_5;
+
+
+          // updates edges
+          e0->halfedge() = h_in;
+          e1->halfedge() = h_in_1;
+          e2->halfedge() = h_in_12;
+          e3->halfedge() = h_in_14;
+          e4->halfedge() = h_in_5;
+          e5->halfedge() = h_in_2;
+          e6->halfedge() = h_in_10;
+          e7->halfedge() = h_in_4;
+
+          // updates edges status that touches the vertices
+          e0->isNew = 0;
+          e5->isNew = 1;
+          e6->isNew = 0;
+          e7->isNew = 1;
+
+          // add 2 new faces
+          f1->halfedge() = h_in;
+          f2->halfedge() = h_in_3;
+          f3->halfedge() = h_in_10;
+          f4->halfedge() = h_in_13;
+
+          return m;
+
+      }
+
+      return VertexIter();
   }
 
 
