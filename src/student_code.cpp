@@ -313,17 +313,83 @@ namespace CGL
     // 1. Compute new positions for all the vertices in the input mesh, using the Loop subdivision rule,
     // and store them in Vertex::newPosition. At this point, we also want to mark each vertex as being
     // a vertex of the original mesh.
+
+      for (VertexIter viter = mesh.verticesBegin(); viter != mesh.verticesEnd(); viter++) {
+          // Calculate n and u
+          float n = viter->degree();
+          float u = n == 3 ? float(3) / float(16) : float(3) / (float(8) * n);
+          // Weighted average of current and surrounding vertex positions, as per the spec
+          Vector3D newPos = (1 - n*u) * viter->position;
+          HalfedgeIter h = viter->halfedge();
+          do {
+              h = h->twin();
+              newPos += (u * h->vertex()->position);
+              h = h->next();
+          } while (h != viter->halfedge());
+          viter->newPosition = newPos;
+          // Mark each vertex as being a vertex of the original mesh
+          viter->isNew = false;
+      }
     
     // 2. Compute the updated vertex positions associated with edges, and store it in Edge::newPosition.
+      for (EdgeIter eiter = mesh.edgesBegin(); eiter != mesh.edgesEnd(); eiter++) {
+          // Finding the positions of all four nearby vertices, as per the spec
+          Vector3D A = eiter->halfedge()->vertex()->position;
+          Vector3D B = eiter->halfedge()->twin()->vertex()->position;
+          Vector3D C = eiter->halfedge()->next()->next()->vertex()->position;
+          Vector3D D = eiter->halfedge()->twin()->next()->next()->vertex()->position;
+          // Compute weighted average, as per the spec
+          eiter->newPosition = ((float(3) / float(8)) * (A + B)) + ((float(1) / float(8)) * (C + D));
+      }
+
     
     // 3. Split every edge in the mesh, in any order. For future reference, we're also going to store some
     // information about which subdivide edges come from splitting an edge in the original mesh, and which edges
     // are new, by setting the flat Edge::isNew. Note that in this loop, we only want to iterate over edges of
     // the original mesh---otherwise, we'll end up splitting edges that we just split (and the loop will never end!)
     
+      // Store all original edges
+      vector<EdgeIter> originalEdges;
+      for (EdgeIter eiter = mesh.edgesBegin(); eiter != mesh.edgesEnd(); eiter++) {
+          originalEdges.push_back(eiter);
+      }
+
+      // Iterate over all original edges
+      for (unsigned int i = 0; i < originalEdges.size(); i++) {
+          // Define the edge, two endpoints A and B, and the newly split vertex
+          EdgeIter e = originalEdges[i];
+          VertexIter A = e->halfedge()->vertex();
+          VertexIter B = e->halfedge()->twin()->vertex();
+          VertexIter newPoint = mesh.splitEdge(e);
+          // New vertex is new and has position newPosition
+          newPoint->isNew = true;
+          newPoint->position = e->newPosition;
+          // Iterate over all connecting edges to the new point
+          HalfedgeIter hiter = newPoint->halfedge();
+          do {
+              hiter = hiter->twin();
+              VertexIter endPoint = hiter->vertex();
+              // If the connecting edge connects the new vertex to A or B, then it is old; otherwise new
+              hiter->edge()->isNew = (endPoint != A && endPoint != B) ? true : false;
+              hiter = hiter->next();
+          } while (hiter != newPoint->halfedge());
+      }
+
+
     // 4. Flip any new edge that connects an old and new vertex.
+      for (EdgeIter eiter = mesh.edgesBegin(); eiter != mesh.edgesEnd(); eiter++) {
+          VertexIter A = eiter->halfedge()->vertex();
+          VertexIter B = eiter->halfedge()->twin()->vertex();
+          if ((A->isNew && !(B->isNew)) || (!(A->isNew) && (B->isNew))) {
+              mesh.flipEdge(eiter);
+          }
+      }
 
     // 5. Copy the new vertex positions into final Vertex::position.
+      for (VertexIter viter = mesh.verticesBegin(); viter != mesh.verticesEnd(); viter++) {
+          // TODO: not sure if I should be checking isNew?
+          viter->position = viter->newPosition;
+      }
 
   }
 }
