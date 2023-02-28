@@ -292,12 +292,29 @@ namespace CGL
         d->halfedge() = h_in_5;
         m->halfedge() = h_in;
 
+        // update edge connections
+        e0->halfedge() = h_in;
+        e1->halfedge() = h_in_1;
+        e2->halfedge() = h_in_12;
+        e3->halfedge() = h_in_14;
+        e4->halfedge() = h_in_5;
+        e5->halfedge() = h_in_2;
+        e6->halfedge() = h_in_10;
+        e7->halfedge() = h_in_4;
 
+        // update isNew
+        e0->isNew = 0;
+        e5->isNew = 1;
+        e6->isNew = 0;
+        e7->isNew = 1;
 
+        // Faces
+        f1->halfedge() = h_in;
+        f2->halfedge() = h_in_3;
+        f3->halfedge() = h_in_10;
+        f4->halfedge() = h_in_13;
 
-
-
-
+        return m;
     }
     return VertexIter();
   }
@@ -330,7 +347,7 @@ namespace CGL
           // Mark each vertex as being a vertex of the original mesh
           viter->isNew = false;
       }
-    
+
     // 2. Compute the updated vertex positions associated with edges, and store it in Edge::newPosition.
       for (EdgeIter eiter = mesh.edgesBegin(); eiter != mesh.edgesEnd(); eiter++) {
           // Finding the positions of all four nearby vertices, as per the spec
@@ -342,7 +359,6 @@ namespace CGL
           eiter->newPosition = ((float(3) / float(8)) * (A + B)) + ((float(1) / float(8)) * (C + D));
       }
 
-    
     // 3. Split every edge in the mesh, in any order. For future reference, we're also going to store some
     // information about which subdivide edges come from splitting an edge in the original mesh, and which edges
     // are new, by setting the flat Edge::isNew. Note that in this loop, we only want to iterate over edges of
@@ -374,7 +390,6 @@ namespace CGL
               hiter = hiter->next();
           } while (hiter != newPoint->halfedge());
       }
-
 
     // 4. Flip any new edge that connects an old and new vertex.
       for (EdgeIter eiter = mesh.edgesBegin(); eiter != mesh.edgesEnd(); eiter++) {
