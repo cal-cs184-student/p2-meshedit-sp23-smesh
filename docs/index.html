@@ -361,37 +361,51 @@
     <table style="width:100%">
         <tr align="center">
             <td>
-                <img src="p6_1.png" align="middle" width="400px"/>
+                <img src="p6_1.png" align="middle" width="400px" />
             </td>
             <td>
-                <img src="p6_2.png" align="middle" width="400px"/>
-            </td>
-        </tr>
-        <tr align="center">
-            <td>
-                <img src="p6_3.png" align="middle" width="400px"/>
-            </td>
-            <td>
-                <img src="p6_4.png" align="middle" width="400px"/>
+                <img src="p6_2.png" align="middle" width="400px" />
             </td>
         </tr>
         <tr align="center">
             <td>
-                <img src="p6_5.png" align="middle" width="400px"/>
+                <img src="p6_3.png" align="middle" width="400px" />
             </td>
             <td>
-                <img src="p6_6.png" align="middle" width="400px"/>
+                <img src="p6_4.png" align="middle" width="400px" />
             </td>
         </tr>
         <tr align="center">
             <td>
-                <img src="p6_7.png" align="middle" width="400px"/>
+                <img src="p6_5.png" align="middle" width="400px" />
             </td>
             <td>
-                <img src="p6_8.png" align="middle" width="400px"/>
+                <img src="p6_6.png" align="middle" width="400px" />
+            </td>
+        </tr>
+        <tr align="center">
+            <td>
+                <img src="p6_7.png" align="middle" width="400px" />
+            </td>
+            <td>
+                <img src="p6_8.png" align="middle" width="400px" />
             </td>
         </tr>
     </table>
+
+    Above are screenshots of how meshes (specifically, cube.dae), performs after loop subdivision. Sharp edges and corners get rounded out, because their associated edges and faces get split into subdivided edges and faces with less sharp of an angle.
+    By splitting the edges on the two faces adjancent to the edge we want to maintain sharpness in, we can preserve the sharpness, as seen in the images below.
+    <table style="width:100%">
+        <tr align="center">
+            <td>
+                <img src="p6_14.png" align="middle" width="400px" />
+            </td>
+            <td>
+                <img src="p6_15.png" align="middle" width="400px" />
+            </td>
+        </tr>
+    </table>
+
 </p>
 <br>
 
@@ -400,7 +414,26 @@
   Load dae/cube.dae. Perform several iterations of loop subdivision on the cube. Notice that the cube becomes slightly asymmetric after repeated subdivisions. Can you pre-process the cube with edge flips and splits so that the cube subdivides symmetrically? Document these effects and explain why they occur. Also explain how your pre-processing helps alleviate the effects.
 </b>
 <p>
-    YOUR RESPONSE GOES HERE
+    Yes, I can preprocess the cube with edge flips and splits so that the cube divides symmetrically. By splitting the diagonal edges across each face into two, the degree of every vertex in the cube is the same. Thus, when subdivided, each face of the cube is divided equally, resulting in a symmetric subdivision.
+    Below, the first row shows the asymmetric edges on each face, and the resulting asymmetric subdivision. The second row shows the split edges, resulting in symmetric edges on each face, and the resulting symmetric subdivision.
+    <table style="width:100%">
+        <tr align="center">
+            <td>
+                <img src="p6_10.png" align="middle" width="400px" />
+            </td>
+            <td>
+                <img src="p6_11.png" align="middle" width="400px" />
+            </td>
+        </tr>
+        <tr align="center">
+            <td>
+                <img src="p6_12.png" align="middle" width="400px" />
+            </td>
+            <td>
+                <img src="p6_13.png" align="middle" width="400px" />
+            </td>
+        </tr>
+    </table>
 </p>
 <br>
 
