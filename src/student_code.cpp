@@ -352,7 +352,7 @@ namespace CGL
           VertexIter v2 = h2->vertex();
           VertexIter v3 = h5->vertex();
 
-          e->newPosition =  (v0->position + v1->position) * 3.0 / 8.0 +  (v2->position + v3->position) * 1.0 / 8.0;
+          e->newPosition =  (v0->position + v1->position) * float(3) / float(8) +  (v2->position + v3->position) * float(1) / float(8);
           e->isNew = 0;
       }
 
@@ -366,9 +366,9 @@ namespace CGL
           } while (h != v->halfedge());
 
           float n = (float) v->degree();
-          float u = (n == 3.0) ? (3.0 / 16.0) : (3.0 / (8.0 * n));
+          float u = (n == float(3)) ? (float(3) / float(16)) : (float(3) / (float(8) * n));
 
-          v->newPosition = (1.0 - n * u) * v->position + u * og_pos_sum;
+          v->newPosition = (float(1) - n * u) * v->position + u * og_pos_sum;
           v->isNew = 0;
 
       }
